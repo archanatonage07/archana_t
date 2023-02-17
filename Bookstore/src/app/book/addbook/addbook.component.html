@@ -1,0 +1,74 @@
+<div class="container">
+    <form [formGroup]="addbook">
+        <h1 class="AddBook"> Add Book </h1>
+        <div class="BookName">
+            <label>Book Name:</label><br>
+            <input class="field1" type="name" formControlName="BookName" id="name" required>
+            <div *ngIf="addbook.controls['BookName'].errors && addbook.controls['BookName'].touched">
+                <span class="error-span" *ngIf="addbook.controls['BookName']">
+                    Add Book is required
+                </span>
+                <span class="error-span" *ngIf="addbook.controls['BookName']errors['BookName']">
+                    Enter valid BookName</span>
+            </div>
+        </div>
+
+        <div class="BookPrice">
+            <label>Book Price:</label><br>
+            <input class="field2" type="bookprice" formControlName="BookPrice" id="bookprice" required>
+            <div *ngIf="addbook.controls['BookPrice']errors">
+                <span class="error-span"
+                    *ngIf="addbook.controls['BookPrice']errors['required']&& addbook.controls['BookPrice'].touched">
+
+                </span>
+            </div>
+        </div>
+        <div class="BookAuthor">
+            <label>Book Author:</label><br>
+            <input class="field3" type="BookAuthor" formControlName="BookAuthor" id="BookAuthor" required>
+            <div *ngIf="addbook.controls['BookAuthor'].errors">
+                <span class="error-span"
+                    *ngIf="addbook.controls['BookAuthor'].errors['required']&& addbook.controls['BookAuthor'].touched">
+                    Book Author is required</span>
+
+            </div>
+        </div>
+        <div class="PublishedDate">
+            <label>Published Date:</label><br>
+            <input class="field4" type="date" formControlName="PublishedDate" id="date" required>
+            <div *ngIf="addbook.controls['PublishedDate']errrors">
+                <span class="error-span" 
+                *ngIf="addbook.controls['PublisheDate']errors['required']&& addbook.controls['PublishedDate'].touched">
+                Published Date is required</span>
+            </div>
+        </div>
+        <button class="button" type="submit" (click)="onsave()">submit</button>
+        <div class="container1">
+        <input type="file"></div>
+    </form>
+</div>
+
+
+
+<button (click)="callApi()">API</button>
+<div> 
+    <table >
+        <tr><th>
+            Api
+        </th>
+        <th>
+            Description
+        </th></tr>
+        <tr   *ngFor="let entry of entries">
+            <td>
+                {{entry.API}}
+            </td>
+            <td>
+                {{entry.Description}}
+            </td>
+        </tr>
+        
+    </table>
+    <div *ngFor="let entry in entries">
+        <label></label></div>
+</div>

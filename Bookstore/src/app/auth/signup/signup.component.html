@@ -1,0 +1,40 @@
+<div class="container">
+    <form [formGroup] = "signupForm" >
+        <h2 class="login">Sign Up</h2>
+        <div class="name">
+            <label>Name:</label><br>
+            <input class="field0" type="text" placeholder="Name" formControlName="name" id="" required>
+            <div *ngIf="signupForm.controls['name'].errors && signupForm.controls['name'].touched">
+                <span class="error-span" *ngIf="signupForm.controls['name']errors['required']">
+                    Name is required
+                </span>
+            </div>
+        </div>
+        <div class="email">
+            <label>Email:</label><br>
+            <input class="field1" type="email" placeholder="username" formControlName="email" id="mail" required>
+            <div *ngIf="signupForm.controls['email'].errors && signupForm.controls['email'].touched">
+                <span class="error-span" *ngIf="signupForm.controls['email'].errors['required']">
+                    Email is required
+                </span>
+                <span class="error-span" *ngIf="signupForm.controls['email'].errors['email']">
+                    Enter valid Email </span>
+            </div>
+        </div>
+        <div class="password">
+            <label>Password:</label><br>
+            <input class="field2" type="password" Input placeholder="Password" ngModel formControlName="password"
+                id="password" required>
+            <div *ngIf="signupForm.controls['password'].errors && signupForm.controls['password'].touched">
+                <span class="error-span" *ngIf="signupForm.controls['password']errors['required']">
+                    Password is required
+                </span>
+                <span class="error-span" *ngIf="signupForm.controls['password']errors['minlength']">
+                    Password must be at least 6 characters</span>
+            </div>
+        </div>
+        <button class="button" type="submit" (click)="onSave()">Sign Up</button>
+
+    </form>
+</div>
+

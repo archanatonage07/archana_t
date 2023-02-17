@@ -1,0 +1,130 @@
+.container{
+    width: 550px;
+    height: 550px;
+    margin-left: 450px;
+    margin-top: 30px;
+    border-radius: 50px;
+    border: 1px solid #a3b1cb;
+}
+.BookName{
+    margin-left: 60px;
+    margin-top: 40px;
+    font-weight: bold;
+}
+.BookPrice{
+    margin-left: 60px;
+    margin-top: 40px;
+    font-weight: bold;
+}
+.BookAuthor{
+    margin-left: 60px;
+    margin-top: 40px;
+    font-weight: bold;
+}
+.PublishedDate{
+    margin-left: 60px;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+.button{
+    margin-left: 340px;
+    margin-top: 30px;
+    background-color: red;
+    width: 80px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #a3b1cb;
+}
+.field1{
+    border-radius: 8px;
+    border: 1px solid #a3b1cb;
+     width: 250px;
+    height: 40px;
+    }
+    .field2{
+    border-radius: 8px;
+    border: 1px solid #a3b1cb;
+    width: 250px;
+    height: 40px;
+    margin-right: 100px;
+    }
+    .field3{
+        border-radius: 8px;
+    border: 1px solid #a3b1cb;
+    width: 250px;
+    height: 40px;
+    margin-right: 100px;
+
+    }
+    .field4{
+        border-radius: 8px;
+    border: 1px solid #a3b1cb;
+    width: 250px;
+    height: 40px;
+    margin-right: 100px;
+
+    }
+    .AddBook {
+        font-weight: bold;
+        margin-left: 200px;
+    } 
+    .container1{
+        margin-left: 60px;
+      
+    } 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.error-span {
+    color: brown;
+}
+
+.addbook_container {
+    display: flex;
+    
+
+} 
+
+ 

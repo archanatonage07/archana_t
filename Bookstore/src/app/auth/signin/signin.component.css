@@ -1,0 +1,57 @@
+.container{
+    width: 380px; 
+    height: 420px;
+    margin-left: 500px;
+    margin-top: 50px;
+    border-radius: 8px;
+    border: 1px solid #a3b1cb; 
+}
+.email
+{
+margin-left: 60px;
+margin-top: 40px;
+font-weight: bold;
+}
+.password{
+margin-left: 60px;
+margin-top: 20px;
+font-weight: bold;
+}
+.login{
+margin-left: 140px;
+ margin-top: 40px;
+}
+.button{
+margin-left: 240px;
+margin-top: 30px;
+background-color: red;
+width: 80px;
+height: 40px;
+border-radius: 8px;
+border: 1px solid #a3b1cb;
+}
+
+.field1{
+border-radius: 8px;
+border: 1px solid #a3b1cb;
+ width: 250px;
+height: 40px;
+}
+.field2{
+border-radius: 8px;
+border: 1px solid #a3b1cb;
+width: 250px;
+height: 40px;
+margin-right: 100px;
+}
+.link{
+margin-top: -40px;
+margin-left: 70px;
+}
+.register{
+margin-top: 50px;
+margin-left: 140px; 
+}
+.error-span{
+color: brown;
+}

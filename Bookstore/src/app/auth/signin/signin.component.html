@@ -1,0 +1,78 @@
+<div class="container">
+    <form [formGroup]="signinForm">
+      <h2 class="login">Sign In</h2>
+      <div class="email">
+        <label>Email:</label><br>
+        <input class="field1" type="email" placeholder="Username"
+          formControlName="email" id="mail" required>
+        <div *ngIf="signinForm.controls['email'].errors && signinForm.controls['email'].touched">
+          <span class="error-span"
+            *ngIf="signinForm.controls['email'].errors['required'] ">
+            Email is required
+          </span>
+          <span class="error-span" *ngIf="signinForm.controls['email'].errors['email']">
+            Enter valid email</span>
+        </div>
+      </div>
+      <div class="password">
+        <label>Password:</label><br>
+        <input class="field2" type="password" Input placeholder="Password"
+          formControlName="password" id="password" required>
+        <div *ngIf="signinForm.controls['password'].errors">
+          <span class="error-span"
+            *ngIf="signinForm.controls['password'].errors['required'] && signinForm.controls['password'].touched">
+            Password is required
+          </span>
+          <span class="error-span"
+            *ngIf="signinForm.controls['password'].errors['minlength']">
+            Password must be at least 6 characters</span>
+        </div>
+      </div>
+      <!-- <div class="number">
+      <label>Mobile number:</label><br>
+      <input class="field3" type="number" Input placeholder="number"
+      formControlName="number" id="number" required>
+      <div *ngIf="signinForm.controls['number'].errors">
+        <span class="error-span"
+        *ngIf="signinForm.controls['number'].errors['minlength']">
+        number must be at least 10 characters</span>
+      </div>
+      </div> -->
+      
+      
+  
+      <button class="button" type="submit" (click)="onsave()">signin</button>
+      <div class="link">
+        <a (click)="forgot()" href="javascript:void">Forgot Password</a>
+      </div>
+      <div class="register">
+        <a href="javascript:void" (click)="signin()">New Register?</a>
+      </div>
+    </form>
+  </div>
+  
+
+  <button (click)="callApi()">API</button>
+  <table>
+    <tr>
+      <th>
+        API
+      </th>
+      <th>
+        Description
+      </th></tr>
+      <tr *ngFor="let Kothawale of entries">
+        <td>
+          {{Kothawale.API}}
+        </td>
+        <td>
+          {{Kothawale.Description}}
+        </td>
+
+      </tr>
+      
+
+      
+    
+  </table>
+  
